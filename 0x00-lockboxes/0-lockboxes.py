@@ -3,6 +3,7 @@
 Module.
 """
 
+
 def canUnlockAll(boxes):
     """Determines if all the boxes can be opened"""
 
@@ -13,7 +14,7 @@ def canUnlockAll(boxes):
 
     for key in holder:
         for key in boxes[key]:
-            
+
             if key in holder:
                 continue
 
