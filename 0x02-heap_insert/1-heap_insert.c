@@ -16,10 +16,10 @@ heap_t *heap_insert(heap_t **root, int value)
 		return (NULL);
 
 	if (!(*root))
-    {
+	{
 		*root = new;
 		return (new);
-    }
+	}
 
 	low = insertNnode(*root);
 	if (!low->left)
@@ -78,8 +78,8 @@ heap_t *swapper(heap_t *node)
 space_t tree_size(heap_t *node)
 {
 	space_t tmp;
-    space_t left;
-    space_t right;
+	space_t left;
+	space_t right;
 
 	tmp.n = 0;
 	tmp.p = node;
@@ -89,7 +89,7 @@ space_t tree_size(heap_t *node)
 
 	left = tree_size(node->left);
 	right = tree_size(node->right);
-    
+
 	if (left.n <= right.n)
 	{
 		left.n += 1;
