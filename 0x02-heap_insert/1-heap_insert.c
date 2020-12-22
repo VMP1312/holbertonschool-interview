@@ -19,7 +19,7 @@ heap_t *heap_insert(heap_t **root, int value)
 		*root = new;
 		return (new);
 
-	low = insert_new_node(*root);
+	low = insertNnode(*root);
 	if (!low->left)
 		low->left = new;
 
