@@ -42,7 +42,7 @@ typedef struct space_s space_t;
 
 heap_t *heap_insert(heap_t **root, int value);
 heap_t *insertNnode(heap_t *parent);
-heap_t *heap_swap(heap_t *node);
-space_t heap_size(heap_t *node);
+heap_t *swapper(heap_t *node);
+space_t tree_size(heap_t *node);
 
 #endif
