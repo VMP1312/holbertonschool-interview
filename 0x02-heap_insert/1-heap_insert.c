@@ -6,7 +6,7 @@
  * @value: Value.
  * Return: New node.
  */
-heap_t *tree_insert(heap_t **root, int value)
+heap_t *heap_insert(heap_t **root, int value)
 {
 	heap_t *new = NULL;
 	heap_t *low = NULL;
@@ -30,11 +30,11 @@ heap_t *tree_insert(heap_t **root, int value)
 	return (swapper(new));
 }
 /**
- * insert_new_node - Inserts a new node.
+ * insertNnode - Inserts a new node.
  * @root: Root.
  * Return: New Node.
  */
-heap_t *insert_new_node(heap_t *root)
+heap_t *insertNnode(heap_t *root)
 {
 	space_t tmp;
 
