@@ -15,6 +15,7 @@ def minOperations(n):
     copy = 0
     paste = 0
     not1 = not3 = 0
+    need = 0
 
     while cnt < n:
         if cnt != 1 and n % cnt == 0:
@@ -62,4 +63,5 @@ def minOperations(n):
         if save >= n:
             break
 
-    return copy + paste
+    need = copy + paste
+    return need
