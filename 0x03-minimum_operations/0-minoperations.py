@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+#!/usr/bin/python
+
 """
 Fewest number of operations needed
 """
@@ -6,6 +7,7 @@ Fewest number of operations needed
 
 def minOperations(n):
     """Fewest number of operations needed"""
+
     if n < 1:
         return 0
 
@@ -23,8 +25,8 @@ def minOperations(n):
                 pv = save
                 not1 = 0
                 cnt = save
-
             else:
+
                 pv = cnt
 
             not3 = 0
@@ -35,9 +37,8 @@ def minOperations(n):
 
             paste += 1
             save += pv
-
         elif n % (cnt * 2) == 0:
-    
+
             if not1 == 1:
                 not1 = 0
 
@@ -46,9 +47,9 @@ def minOperations(n):
             pv = cnt
             paste += 1
             cnt = 2 * cnt
-            save += (2 * pv) - save
-
+            save += 2 * pv - save
         else:
+
             not1 = 0
 
             if not3 == 0:
