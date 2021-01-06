@@ -37,7 +37,7 @@ def minOperations(n):
             save += pv
 
         elif n % (cnt * 2) == 0:
-    
+
             if not1 == 1:
                 not1 = 0
 
