@@ -3,6 +3,7 @@
 /**
 * printer - printer for the first grid
 * @grid: grid 1
+* Return: Void
 */
 
 static void print_grid(int grid[3][3])
@@ -26,7 +27,9 @@ static void print_grid(int grid[3][3])
  * sandpiles_sum - sum sandpiles
  * @grid1: grid 1
  * @grid2: grid 2
+ * Return: Void
  */
+
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
     int i = 0;
