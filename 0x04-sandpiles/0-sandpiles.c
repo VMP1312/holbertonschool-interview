@@ -32,12 +32,7 @@ static void print_grid(int grid[3][3])
 
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
-	int i = 0;
-	int j = 0;
-	int stl = 0;
-	int cnt = 0;
-	int check = 0;
-
+	int i = 0, j = 0, stl = 0, cnt = 0, check = 0;
 	while (cnt == 0)
 	{
 		stl = 0;
@@ -58,7 +53,6 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 			printf("=\n");
 			print_grid(grid1);
 		}
-
 		stl = 0;
 		for (i = 0; i < 3; i++)
 		{
