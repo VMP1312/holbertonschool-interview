@@ -68,15 +68,15 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 				{
 					if (grid2[i][j] > 3)
 					{
-						grid1[i][j] = grid1[i][j] - 4;
-						if (j > 0)
-							grid1[i][j - 1] = (grid1[i][j - 1]) + 1;
-						if (i > 0)
-							grid1[i - 1][j] = (grid1[i - 1][j]) + 1;
-						if (i < 2)
-							grid1[i + 1][j] = (grid1[i + 1][j]) + 1;
-						if (j < 2)
-							grid1[i][j + 1] = (grid1[i][j + 1]) + 1;
+					grid1[i][j] = grid1[i][j] - 4;
+					if (j > 0)
+					grid1[i][j - 1] = (grid1[i][j - 1]) + 1;
+					if (i > 0)
+					grid1[i - 1][j] = (grid1[i - 1][j]) + 1;
+					if (i < 2)
+					grid1[i + 1][j] = (grid1[i + 1][j]) + 1;
+					if (j < 2)
+					grid1[i][j + 1] = (grid1[i][j + 1]) + 1;
 					}
 					else
 						stl++;
