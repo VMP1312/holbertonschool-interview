@@ -33,15 +33,12 @@ static void print_grid(int grid[3][3])
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
 	int i = 0, j = 0, stl = 0, cnt = 0, check = 0;
-	while (cnt == 0)
-	{
+
+	while (cnt == 0){
 		stl = 0;
-		if (check != 0)
-		{
-			for (i = 0; i < 3; i++)
-			{
-				for (j = 0; j < 3; j++)
-				{
+		if (check != 0){
+			for (i = 0; i < 3; i++){
+				for (j = 0; j < 3; j++){
 					grid2[i][j] = grid1[i][j];
 					if (grid1[i][j] <= 3)
 						stl++;
