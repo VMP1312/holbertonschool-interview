@@ -1,11 +1,11 @@
 #include "sandpiles.h"
 
 /**
-* print_grid - printer for the first grid
+* printer - printer for the first grid
 * @grid: grid 1
 */
 
-static void printer(int grid[3][3])
+static void print_grid(int grid[3][3])
 {
     int i;
     int j;
@@ -53,7 +53,7 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
             if (stl == 9)
             break;
             printf("=\n");
-            printer(grid1);
+            print_grid(grid1);
         }
 
         stl = 0;
