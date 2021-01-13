@@ -1,7 +1,7 @@
 #include "sandpiles.h"
 
 /**
-* printer - printer for the first grid
+* print_grid - printer for the first grid
 * @grid: grid 1
 * Return: Void
 */
@@ -35,8 +35,7 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 	int i = 0, j = 0, stl = 0, cnt = 0, check = 0;
 
 	while (cnt == 0)
-	{
-		stl = 0;
+	{ stl = 0;
 		if (check != 0)
 		{
 			for (i = 0; i < 3; i++)
@@ -45,15 +44,11 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 				{
 					grid2[i][j] = grid1[i][j];
 					if (grid1[i][j] <= 3)
-						stl++;
-				}
-			}
-
+						stl++; } }
 			if (stl == 9)
 			break;
 			printf("=\n");
-			print_grid(grid1);
-		}
+			print_grid(grid1); }
 		stl = 0;
 		for (i = 0; i < 3; i++)
 		{
@@ -71,15 +66,9 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 					if (i < 2)
 					grid1[i + 1][j] = (grid1[i + 1][j]) + 1;
 					if (j < 2)
-					grid1[i][j + 1] = (grid1[i][j + 1]) + 1;
-					}
+					grid1[i][j + 1] = (grid1[i][j + 1]) + 1; }
 					else
-						stl++;
-				}
+						stl++; }
 			else
-				grid1[i][j] = grid1[i][j] + grid2[i][j];
-			}
-		}
-	check = 1;
-	}
-}
+				grid1[i][j] = grid1[i][j] + grid2[i][j]; } }
+	check = 1; } }
