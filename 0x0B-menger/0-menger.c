@@ -10,7 +10,7 @@ void menger(int level)
 	char printer;
 
 	mv = pow(3, level);
-	for (cnt = 0; n < mv; cnt++)
+	for (cnt = 0; cnt < mv; cnt++)
 	{
 		for (aux = 0; aux < mv;)
 		{
