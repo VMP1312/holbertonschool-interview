@@ -47,7 +47,7 @@ int is_palindrome(listint_t **head)
 	forw = *head;
 	rever = *head;
 	cnt = 0;
-	while (frw->next)
+	while (forw->next)
 	{
 		cnt++;
 		if (forw->next->next)
@@ -74,4 +74,3 @@ int is_palindrome(listint_t **head)
 	}
 	return (1);
 }
-
