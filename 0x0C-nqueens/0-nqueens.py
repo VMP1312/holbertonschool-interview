@@ -28,12 +28,12 @@ def printert(table):
     for i in range(n):
         for j in range(n):
             if table[i][j] == 1:
-            	queens.append([i, j])
-    print(queens)
+            	DicQueens.append([i, j])
+    print(DicQueens)
 
 def isSafe(table, col, row):
     for i in range(col):
-        table[row][i]):
+        if (table[row][i]):
             return False
 
     i = row
