@@ -1,10 +1,10 @@
 #include "search_algos.h"
 
 /**
-* print_array - printer
+* printer - printer
 * @array: array
-* @a: mv aux
-* @high: max position
+* @mv: mv aux
+* @maxi: max position
 */
 
 void printer(int *array, int mv, int maxi)
@@ -29,7 +29,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int mini = 0;
 	int mv = 0;
-	int maxi = (int)size - 1; 
+	int maxi = (int)size - 1;
 	int half = 0;
 
 	if (array == NULL || size <= 0)
