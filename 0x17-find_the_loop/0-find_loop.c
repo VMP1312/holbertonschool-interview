@@ -8,19 +8,19 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *turtle, *hare;
+	listint_t *trtl, *hare;
 
-	for (turtle = hare = head; hare && hare->next;)
+	for (trtl = hare = head; hare && hare->next;)
 	{
-		turtle = turtle->next;
+		trtl = trtl->next;
 		hare = hare->next->next;
 
-		if (turtle == hare)
+		if (trtl == hare)
 		{
-			for (turtle = head; turtle != hare; turtle = turtle->next, hare = hare->next)
+			for (trtl = head; trtl != hare; trtl = trtl->next, hare = hare->next)
 				continue;
 
-			return (turtle);
+			return (trtl);
 		}
 	}
 	return (NULL);
