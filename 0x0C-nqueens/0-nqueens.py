@@ -1,78 +1,78 @@
 #!/usr/bin/python3
-
 import sys
-if len(sys.argv) is not 2:
+
+
+if len(sys.argv) != 2:
     print('Usage: nqueens N')
     exit(1)
-n = sys.argv[1]
+
+cnt = sys.argv[1]
 
 try:
-    n = int(n)
+    cnt = int(cnt)
 
 except:
     print('N must be a number')
     exit(1)
 
-if n < 4:
+if cnt < 4:
     print('N must be at least 4')
     exit(1)
 
-k = 1
 
-
-def printert(table):
+def printer(table):
+    aux = 1
     DicQueens = []
-    global k
-
-    k += 1
-    for i in range(n):
-        for j in range(n):
+    aux += 1
+    for i in range(cnt):
+        for j in range(cnt):
             if table[i][j] == 1:
-            	queens.append([i, j])
-    print(queens)
+                DicQueens.append([i, j])
+    print(DicQueens)
 
-def isSafe(table, col, row):
-    for i in range(col):
-        table[row][i]):
+
+def safe(table, row, colm):
+    for i in range(colm):
+        if (table[row][i]):
             return False
+    x = colm
+    y = row
 
-    i = row
-    j = col
-    while i >= 0 and j >= 0:
-        if(table[i][j]):
+    while y >= 0 and x >= 0:
+        if(table[y][x]):
             return False
-        i -= 1
-        j -= 1
+        x -= 1
+        y -= 1
 
-    i = row
-    j = col
-    while j >= 0 and i < n:
-        if(table[i][j]):
+    y = row
+    x = colm
+
+    while y < cnt and x >= 0:
+        if(table[y][x]):
             return False
-
-        i += 1
-        j -= 1
+        x -= 1
+        y += 1
     return True
 
-def helper(table, col):
-    if (col == n):
-        printert(table)
+
+def helper(table, colm):
+    if (colm == cnt):
+        printer(table)
         return True
 
-    solv = False
-    for i in range(n):
-        if (isSafe(table, i, col)):
-            table[i][col] = 1
-            solv = helper(table, col + 1) or solv
-            table[i][col] = 0
-    return solv
+    sol = False
+    for mv in range(cnt):
+        if (safe(table, mv, colm)):
+            table[mv][colm] = 1
+            sol = helper(table, colm + 1)
+            table[mv][colm] = 0
+    return sol
 
 
 def solver():
-    table = [[0 for j in range(n)] for i in range(n)]
+    table = [[0 for j in range(cnt)] for mv in range(cnt)]
     if (helper(table, 0) is False):
         pass
         return
     return
-
 solver()
