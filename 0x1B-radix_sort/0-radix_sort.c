@@ -1,24 +1,6 @@
 #include "sort.h"
 
 /**
- * radix_sort - Sorter using radix algo.
- * @array: Array.
- * @size: Size.
- */
-void radix_sort(int *array, size_t size)
-{
-	int base, maxi, cnt;
-
-	if (array == NULL || size <= 1)
-		return;
-	maxi = maxim(array, size);
-	for (cnt = 1, base = 10; maxi / cnt > 0; cnt *= base)
-	{
-		cnt_sorter(array, size, cnt);
-	}
-}
-
-/**
  * maxim - Max value.
  * @array: Array.
  * @size: Size.
@@ -70,4 +52,22 @@ void cnt_sorter(int *array, int size, int key)
 
 	free(srt);
 	print_array(array, size);
+}
+
+/**
+ * radix_sort - Sorter using radix algo.
+ * @array: Array.
+ * @size: Size.
+ */
+void radix_sort(int *array, size_t size)
+{
+	int base, maxi, cnt;
+
+	if (array == NULL || size <= 1)
+		return;
+	maxi = maxim(array, size);
+	for (cnt = 1, base = 10; maxi / cnt > 0; cnt *= base)
+	{
+		cnt_sorter(array, size, cnt);
+	}
 }
